@@ -24,7 +24,7 @@
   template:
     src: .env.j2
     dest: "{{ bridge_path }}/monitor/.env"
-    mode: '0666'
+    mode: '0660'
   when: skip_task != true
 
 - name: Copy docker-compose file
@@ -46,4 +46,4 @@
   template:
     src: config.env.j2
     dest: "{{ bridge_path }}/monitor/configs/{{ MONITOR_BRIDGE_NAME }}.env"
-    mode: '0666'
+    mode: '0660'
